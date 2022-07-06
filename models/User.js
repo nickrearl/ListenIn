@@ -38,8 +38,9 @@ User.init(
             }
         },
         profilePic: {
-            type: DataTypes.BLOB('long'),
+            type: DataTypes.STRING,
             allowNull: true,
+            defaultValue: '/assets/images/defaultPic.png'
         },
         anthem: {
             type: DataTypes.STRING,
