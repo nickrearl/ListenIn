@@ -3,12 +3,6 @@
 
 !!!!!!IN DEVELOPMENT!!!!!!
 
-    ````
-    AS AN user that listens to music
-    I WANT to be able to share songs with users
-    SO THAT I can connect with other users and discover new music
-    ````
-
 ## Contents
 
   - [User Story](#user_story)
@@ -19,6 +13,14 @@
   - [Tests](#tests)
   - [License](#license)
   - [Resources](#resources)
+
+  ## User Story
+  
+    ````
+    AS AN user that listens to music
+    I WANT to be able to share songs with users
+    SO THAT I can connect with other users and discover new music
+    ````
 
   ## Installation
 
