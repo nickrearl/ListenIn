@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS listenin_db;
+CREATE DATABASE listenin_db;
