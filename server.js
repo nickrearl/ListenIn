@@ -37,5 +37,5 @@ app.use(routes);
 // force: false will prevent tables from dropping on startup
 // force: true will allow changes to relationships but drops tables on startup **everytime??
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+    app.listen(PORT, () => console.log('Now listening'));
 });
