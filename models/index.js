@@ -15,7 +15,8 @@ User.hasMany(Post, {
 User.belongsToMany(Post, {
     through: Vote,
     as: 'voted_posts',
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
 });
 
 User.hasMany(Vote, {
@@ -26,30 +27,33 @@ User.hasMany(Comment, {
     foreignKey: 'user_id'
 });
 
-    // These associations may need tweaks --->
+// These associations may need tweaks --->
 
-    // --- User follow associations --- //
+// --- User follow associations --- //
+    
     // not sure where user_id vs followed_user_id
-    User.belongsToMany(User, {
-        through: Follow,
-        as: 'Followers',
-        foreignKey: 'followed_user_id'
-    })
 
-    User.hasMany(Follow, {
-        foreignKey: 'user_id'
-    })
+    // User.belongsToMany(User, {
+    //     through: Follow,
+    //     as: 'Followers',
+    //     foreignKey: 'followed_user_id'
+    // })
 
-    // --- User Favorite associations --- //
-    User.belongsToMany(Post, {
-        though: Favorite,
-        as: 'favorite_tracks',
-        foreignKey: 'user_id'
-    })
+    // User.hasMany(Follow, {
+    //     foreignKey: 'user_id'
+    // })
 
-    User.hasMany(Favorite, {
-        foreignKey: 'user_id'
-    })
+// --- User Favorite associations --- //
+
+    // User.belongsToMany(Post, {
+    //     though: Favorite,
+    //     as: 'favorite_tracks',
+    //     foreignKey: 'user_id'
+    // })
+
+    // User.hasMany(Favorite, {
+    //     foreignKey: 'user_id'
+    // })
 
 // ------ End User Associations ------- //
 
@@ -59,12 +63,14 @@ User.hasMany(Comment, {
 
 Post.belongsTo(User, {
     foreignKey: 'user_id',
+    onDelete: 'SET NULL'
 });
 
 Post.belongsToMany(User, {
     through: Vote,
     as: 'voted_posts',
-    foreignKey: 'post_id'
+    foreignKey: 'post_id',
+    onDelete: 'SET NULL'
 });
 
 Post.hasMany(Vote, {
@@ -75,18 +81,19 @@ Post.hasMany(Comment, {
     foreignKey: 'post_id'
 });
 
-    // These associations may need tweaks
+// These associations may need tweaks
 
-    // --- Favorited posts associations --- //
-    Post.belongsToMany(User, {
-        through: Favorite,
-        as: 'favorite_tracks',
-        foreignKey: 'post_id'
-    })
+// --- Favorited posts associations --- //
 
-    Post.hasMany(Favorite, {
-        foreignKey: 'post_id'
-    })
+    // Post.belongsToMany(User, {
+    //     through: Favorite,
+    //     as: 'favorite_tracks',
+    //     foreignKey: 'post_id'
+    // })
+
+    // Post.hasMany(Favorite, {
+    //     foreignKey: 'post_id'
+    // })
 
 // ------ End Post Associations ------ //
 
@@ -95,35 +102,40 @@ Post.hasMany(Comment, {
 // ------ Comment Associations ------ //
 
 Comment.belongsTo(User, {
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
 });
   
 Comment.belongsTo(Post, {
-    foreignKey: 'post_id'
+    foreignKey: 'post_id',
+    onDelete: 'SET NULL'
 });
 
-    // These associations may need tweaks --->
+// These associations may need tweaks --->
 
-    // --- Voting on comments --- //
-    Comment.belongsToMany(User, {
-        through: Vote,
-        as: 'voted_comments',
-        foreignKey: 'comment_id'
-    })
+// --- Voting on comments --- //
 
-    Comment.hasMany(Vote, {
-        foreignKey: 'comment_id'
-    })
+    // Comment.belongsToMany(User, {
+    //     through: Vote,
+    //     as: 'voted_comments',
+    //     foreignKey: 'comment_id'
+    // })
 
-    // --- Comment threads --- //
+    // Comment.hasMany(Vote, {
+    //     foreignKey: 'comment_id'
+    // })
+
+// --- Comment threads --- //
+
     // May need new model or column
     // to define comment threads (researching)
-    Comment.belongsTo(Comment, {
-        foreignKey: 'comment_id'
-    })
-    Comment.hasMany(Comment, {
-        foreignKey: 'comment_id'
-    })
+    
+    // Comment.belongsTo(Comment, {
+    //     foreignKey: 'comment_id'
+    // })
+    // Comment.hasMany(Comment, {
+    //     foreignKey: 'comment_id'
+    // })
 
 // ------ End Comment Associations ------ //
 
@@ -131,14 +143,15 @@ Comment.belongsTo(Post, {
 
 // ------- Follow associations ------- //
 
-    // These associations may need tweaks --->
-    Follow.hasMany(User, {
-        foreignKey: 'followed_user_id'
-    })
+// These associations may need tweaks --->
 
-    Follow.belongsTo(User, {
-        foreignKey: 'user_id'
-    })
+    // Follow.hasMany(User, {
+    //     foreignKey: 'followed_user_id'
+    // })
+
+    // Follow.belongsTo(User, {
+    //     foreignKey: 'user_id'
+    // })
 
 // ------ End Follow Associations ------ //
 
@@ -146,13 +159,13 @@ Comment.belongsTo(Post, {
 
 // ------ Favorite Associations ------ //
 
-Favorite.belongsTo(User, {
-    foreignKey: 'user_id'
-})
+    // Favorite.belongsTo(User, {
+    //     foreignKey: 'user_id'
+    // })
 
-Favorite.belongsTo(Post, {
-    foreignKey: 'post_id'
-})
+    // Favorite.belongsTo(Post, {
+    //     foreignKey: 'post_id'
+    // })
 
 // ------ End Favorite Associations
 
