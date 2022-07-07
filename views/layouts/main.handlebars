@@ -10,20 +10,25 @@
 </head>
 
 <body>
-    <header>
-        <h1>ListenIn</h1>
-        <nav>
+    <header class="row justify-content-center">
+        <h1 class="col-12 text-center">ListenIn</h1>
+        <section class="">
             <a href="/">Home</a>
             {{#if loggedIn }}
-            <button id="logout" class="">logout</button>
+            <form>
+                <label for="song">Song Title</label>
+                <input type="text" placeholder="Song Title" name="song" id="song-title" class="">
+                <label for="spotify">Spotify Link</label>
+                <input type="text" placeholder="Spotify Link" name="spotify" id="spotify-link" class="">
+                <button type="submit">Submit</button>                
+            </form>
             {{else}}
             <a href="/login">Login</a>
             {{/if}}
-        </nav>
+        </section>
     </header>
     <main>
-        <h2>Listen in on these tunes</h2>
-        {{body}}
+        {{{body}}}
         {{#if loggedIn}}
         <script src="/javascript/logout.js"></script>
         {{/if}}

@@ -7,4 +7,18 @@ router.get('/', (req, res) => {
     });
 })
 
+router.get('/login', (req, res) => {
+
+    res.render('login', {
+    });
+})
+
+router.get('/post/:id', (req, res) => {
+    //handlebars page that displays post and all comments on it
+})
+
+router.get('/user/:id', (req, res) => {
+    //handlebars page that displays user and all their posts
+})
+
 module.exports = router
