@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Comment, User, Post, Vote } = require('../../models');
+const sequelize = require('../../config/connection');
 
 // GET Find All Comments
 router.get('/', (req, res) => {
@@ -9,7 +10,10 @@ router.get('/', (req, res) => {
             'comment_text',
             'user_id',
             'post_id',
-            'comment_id'
+            'comment_id',
+            [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE comment.id = vote.comment_id)'),
+            'vote_count'
+            ],
         ],
         order: [['created_at', 'DESC']],
         include: [
@@ -38,7 +42,8 @@ router.post('/', (req, res) => {
             comment_text: req.body.comment_text,
             post_id: req.body.post_id,
             // use the id from the session
-            user_id: req.session.user_id
+            user_id: req.session.user_id,
+            comment_id: req.body.comment_id
         })
         .then(dbCommentData => res.json(dbCommentData))
         .catch(err => {
@@ -70,7 +75,6 @@ router.delete('/:id', (req, res) => {
 
 // PUT /api/comments/upvote
 // Adds vote on specified comment using current user_id
-// !!! MAY NEED TWEAKS -- USED POST /upvote AS REFERENCE !!!
 router.put('/upvote', (req, res) => {
     // make sure the session exists first
     if (req.session) {

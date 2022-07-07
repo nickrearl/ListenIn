@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
     });
 });
 
-// GET One User by id
+// GET One User by id 
 router.get('/:id', (req, res) => {
     User.findOne({
         attributes: { exclude: ['password'] },
@@ -49,19 +49,19 @@ router.get('/:id', (req, res) => {
                 as: 'voted_posts'
             },
             // May need tweaks --->
-            {
-                model: Post,
-                attributes: ['title'],
-                through: Favorite,
-                as: 'favorite_tracks'
-            },
-            {
-                model: User,
-                attributes: ['Username'],
-                through: Follow,
-                // 'followers' or 'followed_users'?
-                as: 'followers?'
-            }
+            // {
+            //     model: Post,
+            //     attributes: ['title'],
+            //     through: Favorite,
+            //     as: 'favorite_tracks'
+            // },
+            // {
+            //     model: User,
+            //     attributes: ['Username'],
+            //     through: Follow,
+            //     // 'followers' or 'followed_users'?
+            //     as: 'followers?'
+            // }
         ]
     })
     .then(dbUserData => {
@@ -94,6 +94,10 @@ router.post('/', (req, res) => {
             res.json(dbUserData);
         });
     })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
 });
 
 // POST Login -- Creates session and marks User as LoggedIn

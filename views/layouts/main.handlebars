@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ListenIn</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <header class="row justify-content-center">
+        <h1 class="col-12 text-center">ListenIn</h1>
+        <section class="">
+            <a href="/">Home</a>
+            {{#if loggedIn }}
+            <form>
+                <label for="song">Song Title</label>
+                <input type="text" placeholder="Song Title" name="song" id="song-title" class="">
+                <label for="spotify">Spotify Link</label>
+                <input type="text" placeholder="Spotify Link" name="spotify" id="spotify-link" class="">
+                <button type="submit">Submit</button>                
+            </form>
+            {{else}}
+            <a href="/login">Login</a>
+            {{/if}}
+        </section>
+    </header>
+    <main>
+        {{{body}}}
+        {{#if loggedIn}}
+        <script src="/javascript/logout.js"></script>
+        {{/if}}
+    </main>
+</body>
