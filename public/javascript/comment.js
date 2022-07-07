@@ -6,3 +6,5 @@ async function commentHandler(e) {
     // POST method ?
     
 }
+
+// TODO: addEventListener for commentHandler

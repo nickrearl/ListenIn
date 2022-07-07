@@ -5,3 +5,5 @@ async function voteHandler(e) {
     // await fetch? 
     // PUT method? 
 }
+
+// TODO: addEventListener for voteHandler
