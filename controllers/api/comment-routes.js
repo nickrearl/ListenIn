@@ -42,7 +42,8 @@ router.post('/', (req, res) => {
             comment_text: req.body.comment_text,
             post_id: req.body.post_id,
             // use the id from the session
-            user_id: req.session.user_id
+            user_id: req.session.user_id,
+            comment_id: req.body.comment_id
         })
         .then(dbCommentData => res.json(dbCommentData))
         .catch(err => {
@@ -74,7 +75,6 @@ router.delete('/:id', (req, res) => {
 
 // PUT /api/comments/upvote
 // Adds vote on specified comment using current user_id
-// !!! MAY NEED TWEAKS -- USED POST /upvote AS REFERENCE !!!
 router.put('/upvote', (req, res) => {
     // make sure the session exists first
     if (req.session) {
