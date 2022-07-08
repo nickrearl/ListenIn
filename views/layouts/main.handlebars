@@ -12,10 +12,10 @@
 <body>
     <header class="container-fluid" >
         <section class="row justify-content-around align-items-center text-center">
-            <h1 class="col-12 col-md-3">ListenIn</h1>
+            <h1 class="col-12 col-md-3"><object data="/images/play.svg" width="55" height="55" align="top"></object>ListenIn</h1>
                 <a href="/" class="col-12 col-md-1">Home</a>
             {{#if loggedIn }}
-            <form class="col-12 col-md-5">
+            <form id="new-post-form" class="col-12 col-md-5">
                 <input type="text" placeholder="Spotify Link" name="spotify" id="spotify-link" class="">
                 <button type="submit">Submit</button>                
             </form>
@@ -27,7 +27,8 @@
     <main class="container-fluid">
         {{{body}}}
         {{#if loggedIn}}
-        <script src="/javascript/logout.js"></script>
+        {{!-- <script src="/javascript/logout.js"></script> --}}
+        <script src="/javascript/add-post.js"></script>
         {{/if}}
 
     </main>

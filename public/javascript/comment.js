@@ -10,7 +10,8 @@ async function commentHandler(e) {
             method: 'POST',
             body: JSON.stringify({
                 comment_text,
-                post_id
+                post_id,
+                comment_id
             }),
             headers: {
                 'Content-Type': 'application/json'
@@ -25,4 +26,4 @@ async function commentHandler(e) {
 }
 
 // Event Listeners
-$('.comment-form').addEventListener('submit', commentHandler);
+document.querySelector('.comment-form').addEventListener('submit', commentHandler);

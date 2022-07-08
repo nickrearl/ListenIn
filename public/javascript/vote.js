@@ -6,7 +6,7 @@ async function voteHandler(e) {
     ];
     
     // TODO: Verify route is correct in fetch method
-    const res = await fetch('/api/posts/vote', {
+    const res = await fetch('/api/post/vote', {
         method: 'PUT',
         body: JSON.stringify({
             post_id: id,
@@ -24,4 +24,4 @@ async function voteHandler(e) {
 }
 
 // Event Listeners
-$('.upvote-btn').addEventListener('submit', voteHandler);
+document.querySelector('.upvote-btn').addEventListener('submit', voteHandler);

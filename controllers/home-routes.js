@@ -20,6 +20,9 @@ router.get('/', async (req, res) => {
                 ],
                 'iframe'
             ],
+            // This orders by vote count
+            // order: [[sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'DESC']],
+            order: [['created_at', 'DESC']],
             include: [
                     {       
                         model: Comment,

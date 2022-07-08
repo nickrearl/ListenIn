@@ -13,4 +13,5 @@ async function logoutHandler() {
 }
 
 // Event Listener
-$('#logout').addEventListener('click', logoutHandler);
+// no input fields triggers null error
+// document.querySelector('#logout').addEventListener('click', logoutHandler);
