@@ -10,15 +10,12 @@
 </head>
 
 <body>
-    <header class="row justify-content-center">
-        <h1 class="col-12 text-center">ListenIn</h1>
-        <section class="">
-            <a href="/">Home</a>
+    <header class="container-fluid" >
+        <section class="row justify-content-around align-items-center">
+            <h1 class="text-center col-3">ListenIn</h1>
+                <a href="/" class="col-1">Home</a>
             {{#if loggedIn }}
-            <form>
-                <label for="song">Song Title</label>
-                <input type="text" placeholder="Song Title" name="song" id="song-title" class="">
-                <label for="spotify">Spotify Link</label>
+            <form class="col-5">
                 <input type="text" placeholder="Spotify Link" name="spotify" id="spotify-link" class="">
                 <button type="submit">Submit</button>                
             </form>
@@ -27,7 +24,7 @@
             {{/if}}
         </section>
     </header>
-    <main>
+    <main class="container-fluid">
         {{{body}}}
         {{#if loggedIn}}
         <script src="/javascript/logout.js"></script>
