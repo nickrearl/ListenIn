@@ -7,7 +7,7 @@ async function signUpHandler(e) {
 
     // TODO: Verify routes are correct for fetch
     if (username && email && pw) {
-        const res = await fetch('/api/users', {
+        const res = await fetch('/api/u', {
             method: 'POST',
             body: JSON.stringify({
                 username,
