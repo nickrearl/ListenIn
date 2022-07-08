@@ -23,4 +23,5 @@ async function voteHandler(e) {
     }
 }
 
+// Event Listeners
 $('.upvote-btn').addEventListener('submit', voteHandler);

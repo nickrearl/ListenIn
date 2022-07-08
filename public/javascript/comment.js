@@ -24,5 +24,5 @@ async function commentHandler(e) {
     }
 }
 
-
+// Event Listeners
 $('.comment-form').addEventListener('submit', commentHandler);
