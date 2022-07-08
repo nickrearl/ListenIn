@@ -63,6 +63,14 @@ Post.init(
                 model: 'user',
                 key: 'id'
             }
+        },
+        thumbnail: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        iframe: {
+            type: DataTypes.STRING(10000),
+            allowNull: true,
         }
     },
     {

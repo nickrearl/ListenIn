@@ -1,9 +1,15 @@
-<article class="post">
-    <div class="title">
-        <a href="{{post_url}}" target="_blank">{{title}}</a>
-        <span>({{format_url post_url}})</span>
-    </div>
-    <div class="meta">
-        {{!-- TODO: Add vote count and get comments --}}
-    </div>
-</article>
+            <article class="col-3 text-center p-4">
+                <div class="title">
+                    <div>
+                        <h3 class="">{{username}}</h3>
+                        <a href="{{song_url}}" target="_blank" class="">Song Title</a>
+                    </div>
+                    <div>
+                        <img src="{{song_thumbnail}}" alt="album thumbnail" class="thumb">
+                    </div>
+                    <div>
+                        <p>{{vote_count}}</p>
+                        <a href="{{post_url}}">Comments()</a>
+                    </div>
+                </div>
+            </article>
