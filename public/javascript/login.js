@@ -1,14 +1,14 @@
-async function signUpHandler(e) {
-    e.preventDefault();
+async function signUpHandler(event) {
+    event.preventDefault();
 
-    const username = $('#username-signup').value.trim();
-    const email = $('#email-signup').value.trim();
-    const pw = $('#password-signup').value.trim();
+    const username = document.querySelector('#username-signup').value.trim();
+    const email = document.querySelector('#email-signup').value.trim();
+    const password = document.querySelector('#password-signup').value.trim();
 
     // TODO: Verify routes are correct for fetch
-    if (username && email && pw) {
+    if (username && email && password) {
         const res = await fetch('/api/u', {
-            method: 'POST',
+            method: 'post',
             body: JSON.stringify({
                 username,
                 email,
@@ -18,32 +18,32 @@ async function signUpHandler(e) {
         });
     
         if (res.ok) {
-            document.location.replace('/home/');
+            document.location.replace('/');
             } else {
             alert(res.statusText);
         }
     }
 }
 
-async function loginHandler(e) {
-    e.preventDefault();
+async function loginHandler(event) {
+    event.preventDefault();
 
-    const email = $('#email-login').value.trim();
-    const pw = $('#password-login').value.trim();
+    const email = document.querySelector('#email-login').value.trim();
+    const password = document.querySelector('#password-login').value.trim();
     
     // TODO: Verify routes are correct for fetch
-    if (email && pw) {
-        const res = await fetch('/api/users/login', {
-            method: 'POST',
+    if (email && password) {
+        const res = await fetch('/api/u/login', {
+            method: 'post',
             body: JSON.stringify({
                 email,
-                pw
+                password
             }),
             headers: { 'Content-Type': 'application/json' }
         });
 
         if (res.ok) {
-            document.location.replace('/home/');
+            document.location.replace('/');
         } else {
             alert(res.statusText);
         }
@@ -51,5 +51,5 @@ async function loginHandler(e) {
 }
 
 // Event Listeners
-$('.signup-form').addEventListener('submit', signUpHandler);
-$('.login-form').addEventListener('submit', loginHandler);
+// document.querySelector('.signup-form').addEventListener('submit', signUpHandler);
+document.querySelector('.login-form').addEventListener('submit', loginHandler);

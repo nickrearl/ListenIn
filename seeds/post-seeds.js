@@ -2,72 +2,80 @@ const { Post } = require('../models');
 
 const postdata = [
     {
-        title: 'Donec posuere metus vitae ipsum.',
+        title: "Love You When You're Gone",
         post_url: 'https://open.spotify.com/track/4a5a4NpPcsp8lKLjsGqks2?si=38a65e07b5294955',
         user_id: 10,
         thumbnail: "https://i.scdn.co/image/ab67616d00001e02e86b856d0bbba7b181be49d5",
-        iframe: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="50%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="300" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
     },
     {
-        title: 'Morbi non quam nec dui luctus rutrum.',
+        title: "Love You When You're Gone",
         post_url: 'https://open.spotify.com/track/2qtryeKSrI7RgSBo1N3uXv?si=1ba17f30705f4bcf',
         user_id: 8,
         thumbnail: "https://i.scdn.co/image/ab67616d00001e02e86b856d0bbba7b181be49d5",
-        iframe: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="50%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="300" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
     },
     {
-        title: 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.',
+        title: "Love You When You're Gone",
         post_url: 'https://open.spotify.com/track/0bjk1vn5sMOoZOPqSzwoTC?si=2cf42aa9223d4fe1',
         user_id: 1,
         thumbnail: "https://i.scdn.co/image/ab67616d00001e02e86b856d0bbba7b181be49d5",
-        iframe: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="50%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="300" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
     },
     {
-        title: 'Nunc purus.',
+        title: "Love You When You're Gone",
         post_url: 'https://open.spotify.com/track/69OR7bYhVphLuTd9dyJjT9?si=d3a6fec649214f2c',
         user_id: 4,
         thumbnail: "https://i.scdn.co/image/ab67616d00001e02e86b856d0bbba7b181be49d5",
-        iframe: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="50%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="300" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
     },
     {
-        title: 'Pellentesque eget nunc.',
+        title: "Love You When You're Gone",
         post_url: 'https://open.spotify.com/track/2IKix80lBA5ppm6096p5U7?si=da9f7b15e3f54ed1',
         user_id: 7,
         thumbnail: "https://i.scdn.co/image/ab67616d00001e02e86b856d0bbba7b181be49d5",
-        iframe: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="50%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="300" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
     },
     {
-        title: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+        title: "Love You When You're Gone",
         post_url: 'https://open.spotify.com/track/0UV1xzcuNfWs4fWc8ZsB3Y?si=59eb9c9e19144868',
-        user_id: 4
+        user_id: 4,
+        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="300" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+
     },
     {
-        title: 'In hac habitasse platea dictumst.',
+        title: "Love You When You're Gone",
         post_url: 'http://edublogs.org/non/ligula/pellentesque.js',
-        user_id: 1
+        user_id: 1,
+        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="300" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+
     },
     {
-        title: 'Morbi non quam nec dui luctus rutrum.',
+        title: "Love You When You're Gone",
         post_url: 'http://ucla.edu/consequat/nulla.html',
-        user_id: 1
+        user_id: 1,
+        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="300" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+
     },
     {
-        title: 'Duis ac nibh.',
+        title: "Love You When You're Gone",
         post_url: 'http://theguardian.com/dui/vel/nisl/duis/ac/nibh.aspx',
-        user_id: 9
+        user_id: 9,
+        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="300" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+
     },
     {
-        title: 'Curabitur at ipsum ac tellus semper interdum.',
+        title: "Love You When You're Gone",
         post_url: 'https://reverbnation.com/ligula/sit.jpg',
         user_id: 5
     },
     {
-        title: 'In hac habitasse platea dictumst.',
+        title: "Love You When You're Gone",
         post_url: 'http://china.com.cn/lectus/vestibulum.json',
         user_id: 3
     },
     {
-        title: 'Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.',
+        title: "Love You When You're Gone",
         post_url: 'http://networksolutions.com/nam/ultrices/libero/non/mattis/pulvinar.json',
         user_id: 10
     },
