@@ -1,15 +1,15 @@
-            <article class="col-3 text-center p-4">
+            <article class="col-12 col-md-6 col-lg-3 text-center p-4">
                 <div class="title">
                     <div>
-                        <h3 class="">{{username}}</h3>
-                        <a href="{{song_url}}" target="_blank" class="">Song Title</a>
+                        <h3 class="">{{user.username}}</h3>
+                        <a href="{{post_url}}" target="_blank" class="">{{title}}</a>
                     </div>
                     <div>
-                        <img src="{{song_thumbnail}}" alt="album thumbnail" class="thumb">
+                        {{iframe}}
                     </div>
                     <div>
                         <p>{{vote_count}}</p>
-                        <a href="{{post_url}}">Comments()</a>
+                        <a href="/post/{{id}}">Comments</a>
                     </div>
                 </div>
             </article>

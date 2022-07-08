@@ -3,3 +3,7 @@ header {
     background: linear-gradient(0deg, rgba(0,0,0,1) 7%, rgba(167,45,253,1) 89%);
     color: white;
 }
+
+.thumb {
+    max-width: 60%;
+}
