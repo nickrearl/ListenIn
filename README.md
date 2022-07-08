@@ -57,7 +57,7 @@ In order to contribute, create a pull request and follow the steps listed below:
 - Fork the repo
 - Create a feature branch (git checkout -b NAME-HERE)
 - Commit your new feature (git commit -m 'Add some feature')
-- Push your branch (git push)
+- Push your branch (git push origin YOUR-BRANCH-HERE)
 - Create a new Pull Request
 
 Following a code review, your feature will be merged.
