@@ -1,3 +1,8 @@
 {{> user-info user}}
+<section class="row justify-content-around">
+    {{#each user.posts as |post|}}
+    {{> post-info}}
+    {{/each}}
+</section>
 
 <script src="/javascript/logout.js"></script>
