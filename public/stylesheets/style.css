@@ -54,3 +54,16 @@ a.title {
     border-radius: 2px;
     cursor: pointer;
 }
+
+.username a{
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.username a:hover {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 7%, rgba(167,45,253,1) 89%);
+    color: white;
+    opacity: 1;
+}
