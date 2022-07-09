@@ -128,12 +128,34 @@ router.get('/u/:id', (req, res) => {
             'profilePic',
             'anthem',
             [sequelize.literal('(SELECT COUNT(*) FROM favorite WHERE user.id = favorite.user_id)'), 'favorite_count'],
-            [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE user.id = vote.post_id)'), 'vote_count'],
+            [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE user.id = vote.user_id)'), 'vote_count'],
             [sequelize.literal('(SELECT COUNT(*) FROM follow WHERE user.id = follow.followed_user_id)'), 'follower_count']
         ],
         include: [
             {
-                model: Post,
+                model: Post, 
+                attributes: [
+                    'id',
+                    'post_url',
+                    'title',
+                    'user_id',
+                    'created_at',
+                    [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE posts.id = vote.post_id)'),
+                    'vote_count'
+                    ],
+                    'iframe'
+                ],
+                order: [[sequelize.literal('(SELECT COUNT(*) FROM vote WHERE posts.id = vote.post_id)'), 'DESC']],
+                include: [
+                    {
+                        model: Comment,
+                        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                        include: {
+                            model: User,
+                            attributes: ['username']
+                        }
+                    },
+                ]
             },
             {
                 model: Comment,
