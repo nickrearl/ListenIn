@@ -18,7 +18,7 @@ async function commentHandler(e) {
             }
         });
         if (res.ok) {
-            document.location.reload();
+            document.location.replace();
         } else {
             alert(res.statusText)
         }

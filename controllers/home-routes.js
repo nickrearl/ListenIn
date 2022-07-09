@@ -14,6 +14,7 @@ router.get('/', async (req, res) => {
                 'id',
                 'post_url',
                 'title',
+                'user_id',
                 'created_at',
                 [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'),
                 'vote_count'
@@ -45,6 +46,7 @@ router.get('/', async (req, res) => {
 
         res.render('homepage', {
             posts,
+            loggedIn: req.session.loggedIn
         });
     } catch (err) {
         console.log(err);
@@ -53,9 +55,16 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    
+    res.render('login');
+})
 
-    res.render('login', {
-    });
+router.get('/logout', (req, res) => {
+    
 })
 
 router.get('/post/:id', (req, res) => {
@@ -108,8 +117,82 @@ router.get('/post/:id', (req, res) => {
 })
 
 
-router.get('/user/:id', (req, res) => {
-    //handlebars page that displays user and all their posts
-})
+router.get('/u/:id', (req, res) => {
+    User.findOne({
+        where: {
+            id: req.params.id
+        },
+        attributes: [
+            'id',
+            'username',
+            'profilePic',
+            'anthem',
+            [sequelize.literal('(SELECT COUNT(*) FROM favorite WHERE user.id = favorite.user_id)'), 'favorite_count'],
+            [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE user.id = vote.post_id)'), 'vote_count'],
+            [sequelize.literal('(SELECT COUNT(*) FROM follow WHERE user.id = follow.followed_user_id)'), 'follower_count']
+        ],
+        include: [
+            {
+                model: Post,
+                attributes: [
+                    'id',
+                    'title',
+                    'post_url',
+                    'created_at',
+                ]
+            },
+            {
+                model: Comment,
+                attributes: [
+                    'id',
+                    'comment_text',
+                    'created_at'
+                ],
+                include: {
+                    model: Post,
+                    attributes: ['title']
+                }
+            },
+            {
+                model: Post,
+                attributes: ['title'],
+                through: Vote,
+                as: 'voted_posts'
+            },
+            // May need tweaks --->
+            // {
+            //     model: Post,
+            //     attributes: ['title'],
+            //     through: Favorite,
+            //     as: 'favorite_tracks'
+            // },
+            // {
+            //     model: User,
+            //     attributes: ['Username'],
+            //     through: Follow,
+            //     // 'followers' or 'followed_users'?
+            //     as: 'followers?'
+            // }
+        ]
+    })
+    .then(dbUserData => {
+        if (!dbUserData) {
+            res.status(404).json({ message: 'No user found with this id' });
+            return;
+        }
+        
+        const user = dbUserData.get({ plain: true });
+        var current_user = req.user;
+        res.render('profile-page', {
+            user,
+            loggedIn: req.session.loggedIn
+        })
+    })
+
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+});
 
 module.exports = router

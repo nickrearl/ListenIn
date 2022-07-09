@@ -1,14 +1,14 @@
             <article class="col-12 col-md-6 col-lg-3 text-center p-4">
                 <div class="title">
                     <div>
-                        <h3 class="">{{user.username}}</h3>
+                        <h3 class=""><a href="/u/{{user_id}}">{{user.username}}</a></h3>
                         <a href="{{post_url}}" target="_blank" class="">{{title}}</a>
                     </div>
                     <div>
                         {{{iframe}}}
                     </div>
                     <div>
-                        <p>{{vote_count}} <img src="/images/Upvote.svg" width="25" height="25" align="top"></img></p>
+                        <p>{{vote_count}} <img src="/images/UpPlay.svg" width="25" height="25" align="top"></img></p>
                         <a href="/post/{{id}}">{{comments.length}} comments</a>
                     </div>
                 </div>

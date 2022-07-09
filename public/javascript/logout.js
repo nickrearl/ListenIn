@@ -1,12 +1,13 @@
 async function logoutHandler() {
     // TODO: Verify that routes are correct in fetch
-    const res = await fetch('/api/users/logout', {
-        method: 'POST',
+    const res = await fetch('/api/u/logout', {
+        method: 'post',
         headers: { 'Content-Type': 'application/json' }
     });
 
     if (res.ok) {
-        document.location.replace('/');
+        document.location.replace('/',{
+        });
         } else {
         alert(res.statusText);
     }
@@ -14,4 +15,4 @@ async function logoutHandler() {
 
 // Event Listener
 // no input fields triggers null error
-// document.querySelector('#logout').addEventListener('click', logoutHandler);
+document.querySelector('#logout').addEventListener('click', logoutHandler);

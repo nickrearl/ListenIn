@@ -4,6 +4,12 @@ header {
     color: white;
 }
 
+a.title {
+        color: inherit;
+        text-decoration: inherit;
+        font-weight: inherit;
+}
+
 .thumb {
     max-width: 60%;
 }

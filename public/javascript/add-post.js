@@ -8,7 +8,7 @@ async function parsing(post_url) {
     let title = data.title;
     console.log(data);
     let thumbnail = data.thumbnail_url;
-    let iframe = '<iframe src="https://open.spotify.com/embed/track/' + blob + '?utm_source=oembed" width="300" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+    let iframe = '<iframe src="https://open.spotify.com/embed/track/' + blob + '?utm_source=oembed" width="300" height="300" frameBorder="0"></iframe>'
 
     return { title, thumbnail, iframe};
 }
