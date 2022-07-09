@@ -10,6 +10,33 @@ a.title {
         font-weight: inherit;
 }
 
+.link-input {
+    width: 50%;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.post-btn {
+    border: white;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.log-btn {
+    border: white;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: inherit;
+    color: white;
+}
+
+.log-btn a {
+    color: inherit;
+    text-decoration: inherit;
+    font-weight: inherit;
+}
+
 .user-form input {
     width: 100%;
     border: 1px solid #ccc; 

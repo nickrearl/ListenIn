@@ -13,15 +13,15 @@
 <body>
     <header class="container-fluid" >
         <section class="row justify-content-around align-items-center text-center">
-            <h1 class="col-12 col-md-3"><object data="/images/play.svg" width="55" height="55" align="top"></object><a class="title" href="/">ListenIn</a></h1>
+            <h1 class="col-12 col-md-3 p-2"><object data="/images/play.svg" width="55" height="55" align="top"></object><a class="title" href="/">ListenIn</a></h1>
             {{#if loggedIn }}
-            <form id="new-post-form" class="col-12 col-md-5">
-                <input type="text" placeholder="Spotify Link" name="spotify" id="spotify-link" class="">
-                <button type="submit">Submit</button>                
+            <form id="new-post-form" class="col-12 col-md-5 p-2">
+                <input type="text" placeholder="Spotify Link" name="spotify" id="spotify-link" class="link-input">
+                <button type="submit" id="post-submit-btn" class="post-btn">Submit</button>                
             </form>
-            <button type="button" id="logout" class="btn btn-link">Log Out</a>
+            <button type="button" id="logout" class="log-btn col-12 col-md-1 p-2">Log Out</button>
             {{else}}
-            <a href="/login">Login</a>
+            <button type="button" id="logout" class="log-btn col-12 col-md-1 p-2"><a href="/login">Login</a></button>
             {{/if}}
         </section>
     </header>
