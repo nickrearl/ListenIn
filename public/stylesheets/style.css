@@ -17,7 +17,7 @@ a.title {
     box-sizing: border-box;
 }
 
-.post-btn {
+.post-btn, .upvote-btn {
     border: white;
     border-radius: 2px;
     cursor: pointer;
@@ -66,4 +66,21 @@ a.title {
     background: linear-gradient(0deg, rgba(0,0,0,1) 7%, rgba(167,45,253,1) 89%);
     color: white;
     opacity: 1;
+}
+/* Comment box styling */
+
+.comment-form {
+    border-radius: 4px;
+    border: 1px solid #dad7d7;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+textarea {
+    border-radius: 4px;
+    border: 1px solid #dad7d7;
+    padding: 10px;
+    font-size: 15px;
+    height: 100px;
+    width: 100%;
 }
