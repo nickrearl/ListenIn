@@ -1,7 +1,14 @@
             <article class="col-12 col-md-6 col-lg-3 text-center p-4">
                 <div class="title">
                     <div>
-                        <h3 class=""><a href="/u/{{user_id}}">{{user.username}}</a></h3>
+                        <h3 class="">
+                            <a href="/u/{{user_id}}">{{user.username}}</a>
+                            <button class="btn follow-btn fs-6">
+                                <img src="/images/follow.svg" width="25px" height="25px"></img>
+                                Follow
+                            </button>
+                        </h3>
+                        <a href="{{post_url}}" target="_blank" class="">{{title}}</a>
                     </div>
                     <div>
                         {{{iframe}}}
