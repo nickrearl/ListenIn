@@ -4,7 +4,7 @@
                         <h3 class="username">
                             <a href="/u/{{user_id}}" class="p-2">{{user.username}}</a>
                         </h3>
-                            <button class="btn follow-btn fs-6 p-2">
+                            <button class="btn follow-btn fs-6 p-2" id="{{user_id}}">
                                 <img src="/images/follow.svg" width="25px" height="25px"></img>
                                 Follow
                             </button>
@@ -13,7 +13,7 @@
                         {{{iframe}}}
                     </div>
                     <div>
-                        <p>{{vote_count}} <img src="/images/UpPlay.svg" width="25" height="25" align="top"></img></p>
+                        <p>{{vote_count}} <img src="/images/UpPlay.svg" width="25" height="25" align="top"  id="{{post_id}}"></img></p>
                         <a href="/post/{{id}}">{{comments.length}} comments</a>
                     </div>
                 </div>
