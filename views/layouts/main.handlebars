@@ -7,14 +7,13 @@
     <title>ListenIn</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
-     <link rel="icon" type="image/x-icon" href="/images/play.svg">
+    <link rel="icon" type="image/x-icon" href="/images/play.svg">
 </head>
 
 <body>
     <header class="container-fluid" >
         <section class="row justify-content-around align-items-center text-center">
             <h1 class="col-12 col-md-3"><object data="/images/play.svg" width="55" height="55" align="top"></object><a class="title" href="/">ListenIn</a></h1>
-                <a href="/" class="col-12 col-md-1">Home</a>
             {{#if loggedIn }}
             <form id="new-post-form" class="col-12 col-md-5">
                 <input type="text" placeholder="Spotify Link" name="spotify" id="spotify-link" class="">
@@ -28,10 +27,11 @@
     </header>
     <main class="container-fluid">
         {{{body}}}
-        {{#if loggedIn}}
+    </main>
+        {{#if loggedIn }}
         <script src="/javascript/logout.js"></script>
         <script src="/javascript/add-post.js"></script>
+        {{else}}
+        <script src="/javascript/login.js"></script>
         {{/if}}
-
-    </main>
 </body>

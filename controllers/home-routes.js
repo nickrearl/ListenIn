@@ -2,11 +2,6 @@ const router = require('express').Router();
 const {Comment, Post, User, Vote } = require('../models')
 const sequelize = require('../config/connection')
 
-// router.get('/', (req, res) => {
-//     res.render('homepage', {
-//     });
-// })
-
 router.get('/', async (req, res) => {
     try {
         const dbPostData = await Post.findAll({
@@ -79,6 +74,7 @@ router.get('/post/:id', (req, res) => {
             'thumbnail',
             'iframe',
             'created_at',
+            'user_id',
             [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
         ],
         include: [
