@@ -18,7 +18,7 @@
 
 ````
 AS AN user that listens to music
-I WANT to be able to share songs with users
+I WANT to be able to share, like and favor songs
 SO THAT I can connect with other users and discover new music
 ````
 
