@@ -1,28 +1,29 @@
-// async function signUpHandler(event) {
-//     event.preventDefault();
+async function signUpHandler(event) {
+    event.preventDefault();
 
-//     const username = document.querySelector('#username-signup').value.trim();
-//     const email = document.querySelector('#email-signup').value.trim();
-//     const password = document.querySelector('#password-signup').value.trim();
+    const username = document.querySelector('#username-sign-up').value.trim();
+    const email = document.querySelector('#email-sign-up').value.trim();
+    const password = document.querySelector('#password-sign-up"').value.trim();
 
-//     if (username && email && password) {
-//         const res = await fetch('/api/u', {
-//             method: 'post',
-//             body: JSON.stringify({
-//                 username,
-//                 email,
-//                 password
-//             }),
-//             headers: { 'Content-Type': 'application/json' }
-//         });
+    if (username && email && password) {
+        const res = await fetch('/api/u', {
+            method: 'POST',
+            body: JSON.stringify({
+                username,
+                email,
+                password
+            }),
+            headers: { 'Content-Type': 'application/json' }
+        });
     
-//         if (res.ok) {
-//             document.location.replace('/');
-//             } else {
-//             alert(res.statusText);
-//         }
-//     }
-// }
+        if (res.ok) {
+            document.location.replace('/');
+            } else {
+            alert(res.statusText);
+        }
+        
+    }
+}
 
 async function loginHandler(event) {
     event.preventDefault();
@@ -32,7 +33,7 @@ async function loginHandler(event) {
     
     if (email && password) {
         const res = await fetch('/api/u/login', {
-            method: 'post',
+            method: 'POST',
             body: JSON.stringify({
                 email,
                 password
@@ -49,7 +50,5 @@ async function loginHandler(event) {
 }
 
 // Event Listeners
-// commented .singup-form because no input feilds. Null triggers error.
-// un comment when signup-form has been created
-// document.querySelector('.signup-form').addEventListener('submit', signUpHandler);
-document.querySelector('.login-form').addEventListener('submit', loginHandler);
+document.querySelector('#sign-up-btn').addEventListener('submit', signUpHandler);
+document.querySelector('#login-btn').addEventListener('submit', loginHandler);
