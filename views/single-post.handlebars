@@ -1,20 +1,21 @@
-{{> post-info post}}
+<div class="row justify-content-center">
+    {{> post-info post}}
 
-{{#if loggedIn}}
-<form class="comment-form">
-    <div>
-        <textarea name="comment-body"></textarea>
-    </div>
+    {{#if loggedIn}}
+    <form class="comment-form">
+        <div>
+            <textarea name="comment-body"></textarea>
+        </div>
 
-    <div>
-        <button type="submit">Add Comment</button>
-        <button type="button" class="upvote-btn">upvote</button>
-    </div>
-</form>
-{{/if}}
+        <div>
+            <button type="submit">Add Comment</button>
+            <button type="button" class="upvote-btn">upvote</button>
+        </div>
+    </form>
+    {{/if}}
 
-{{>comments post.comments}}
-
+    {{>comments post.comments}}
+</div>
 {{!-- {{#if loggedIn}}
 <script src="./public/javascript/comment.js"></script>
 <script src="./public/javascript/vote.js"></script>
