@@ -1,6 +1,8 @@
 <div class="row justify-content-center">
     {{> post-info post}}
 
+    {{>comments post.comments}}
+
     {{#if loggedIn}}
     <form class="comments col-6 text-center m-4 p-2 comment-form">
         <div>
@@ -13,8 +15,6 @@
         </div>
     </form>
     {{/if}}
-
-    {{>comments post.comments}}
 </div>
 {{!-- {{#if loggedIn}}
 <script src="./public/javascript/comment.js"></script>
