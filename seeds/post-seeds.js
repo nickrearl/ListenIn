@@ -6,62 +6,62 @@ const postdata = [
         post_url: 'https://open.spotify.com/track/4a5a4NpPcsp8lKLjsGqks2?si=38a65e07b5294955',
         user_id: 10,
         thumbnail: "https://i.scdn.co/image/ab67616d00001e02e86b856d0bbba7b181be49d5",
-        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="100%" height="300px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="275px" height="350px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
     },
     {
         title: "Love You When You're Gone",
         post_url: 'https://open.spotify.com/track/2qtryeKSrI7RgSBo1N3uXv?si=1ba17f30705f4bcf',
         user_id: 8,
         thumbnail: "https://i.scdn.co/image/ab67616d00001e02e86b856d0bbba7b181be49d5",
-        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="100%" height="300px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="275px" height="350px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
     },
     {
         title: "Love You When You're Gone",
         post_url: 'https://open.spotify.com/track/0bjk1vn5sMOoZOPqSzwoTC?si=2cf42aa9223d4fe1',
         user_id: 1,
         thumbnail: "https://i.scdn.co/image/ab67616d00001e02e86b856d0bbba7b181be49d5",
-        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="100%" height="300px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="275px" height="350px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
     },
     {
         title: "Love You When You're Gone",
         post_url: 'https://open.spotify.com/track/69OR7bYhVphLuTd9dyJjT9?si=d3a6fec649214f2c',
         user_id: 4,
         thumbnail: "https://i.scdn.co/image/ab67616d00001e02e86b856d0bbba7b181be49d5",
-        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="100%" height="300px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="275px" height="350px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
     },
     {
         title: "Love You When You're Gone",
         post_url: 'https://open.spotify.com/track/2IKix80lBA5ppm6096p5U7?si=da9f7b15e3f54ed1',
         user_id: 7,
         thumbnail: "https://i.scdn.co/image/ab67616d00001e02e86b856d0bbba7b181be49d5",
-        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="100%" height="300px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="275px" height="350px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
     },
     {
         title: "Love You When You're Gone",
         post_url: 'https://open.spotify.com/track/0UV1xzcuNfWs4fWc8ZsB3Y?si=59eb9c9e19144868',
         user_id: 4,
-        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="100%" height="300px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="275px" height="350px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
 
     },
     {
         title: "Love You When You're Gone",
         post_url: 'http://edublogs.org/non/ligula/pellentesque.js',
         user_id: 1,
-        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="100%" height="300px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="275px" height="350px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
 
     },
     {
         title: "Love You When You're Gone",
         post_url: 'http://ucla.edu/consequat/nulla.html',
         user_id: 1,
-        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="100%" height="300px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="275px" height="350px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
 
     },
     {
         title: "Love You When You're Gone",
         post_url: 'http://theguardian.com/dui/vel/nisl/duis/ac/nibh.aspx',
         user_id: 9,
-        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="100%" height="300px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+        iframe: '<iframe src="https://open.spotify.com/embed/track/4a5a4NpPcsp8lKLjsGqks2?utm_source=oembed" width="275px" height="350px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
 
     },
     {
