@@ -1,5 +1,5 @@
-async function voteHandler(e) {
-    e.preventDefault();
+async function voteHandler(event) {
+    event.preventDefault();
 
     const id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
@@ -21,6 +21,8 @@ async function voteHandler(e) {
     } else {
         alert(res.statusText);
     }
+
+    console.log('button clicked');
 }
 
 // Event Listeners

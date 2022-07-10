@@ -34,16 +34,16 @@ router.get('/', (req, res) => {
     });
 });
 
-// POST Create New Comment
+// Create a comment
 router.post('/', (req, res) => {
+    console.log("test")
     // check the session
     if (req.session) {
         Comment.create({
             comment_text: req.body.comment_text,
             post_id: req.body.post_id,
             // use the id from the session
-            user_id: req.session.user_id,
-            comment_id: req.body.comment_id
+            user_id: req.session.user_id
         })
         .then(dbCommentData => res.json(dbCommentData))
         .catch(err => {
