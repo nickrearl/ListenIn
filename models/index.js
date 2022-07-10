@@ -33,15 +33,17 @@ User.hasMany(Comment, {
     
     // not sure where user_id vs followed_user_id
 
-    User.belongsToMany(User, {
-        through: Follow,
-        as: 'Followers',
-        foreignKey: 'user_id'
+    User.hasMany(Follow, {
+        as: "Follower",
+        foreignKey: 'follower_id'
+    })
+    
+    User.hasMany(Follow, {
+        as: "Following",
+        foreignKey: 'following_id'
     })
 
-    User.hasMany(Follow, {
-        foreignKey: 'followed_user_id'
-    })
+    Follow.belongsTo(User)
 
 // --- User Favorite associations --- //
 

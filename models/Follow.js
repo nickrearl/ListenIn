@@ -12,7 +12,7 @@ Follow.init(
         },
         // These two may need to be tweaked.
         // Not sure if functional
-        user_id: {
+        follower_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
@@ -20,7 +20,7 @@ Follow.init(
                 key: 'id'
             }
         },
-        followed_user_id: {
+        following_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
@@ -28,6 +28,11 @@ Follow.init(
                 key: 'id'
             }
         }
+        // void: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     unique: true,
+        // }
     },
     {
         sequelize,

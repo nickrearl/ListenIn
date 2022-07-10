@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Post, Vote, Comment, Follow, Favorite } = require('../../models');
+const sequelize = require('../../config/connection');
 
 // GET All Users
 router.get('/', (req, res) => {
@@ -16,10 +17,18 @@ router.get('/', (req, res) => {
 // GET One User by id 
 router.get('/:id', (req, res) => {
     User.findOne({
-        attributes: { exclude: ['password'] },
         where: {
             id: req.params.id
         },
+        attributes: [
+            'id',
+            'username',
+            'profilePic',
+            'anthem',
+            [sequelize.literal('(SELECT COUNT(*) FROM favorite WHERE user.id = favorite.user_id)'), 'favorite_count'],
+            [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE user.id = vote.user_id)'), 'vote_count'],
+            [sequelize.literal('(SELECT COUNT(*) FROM follow WHERE user.id = follow.following_id)'), 'follower_count']
+        ],
         include: [
             {
                 model: Post,
@@ -182,6 +191,27 @@ router.delete('/:id', (req, res) => {
             console.log(err);
             res.status(500).json(err);
         });
+});
+
+router.post('/follow', (req, res) => {
+    if(req.session) {
+        if(req.session.user_id === req.body.following_id) {
+            console.log("can't follow yourself");
+            res.status(400).json(err);
+            return false;
+        }
+    Follow.findOrCreate({
+        where: {
+            follower_id: req.session.user_id,
+            following_id: req.body.following_id
+        }
+    })
+    .then(dbFollowData => res.json(dbFollowData)) 
+        .catch(err => {
+            console.log(err);
+            res.status(400).json(err);
+        });
+    }
 });
 
 module.exports = router;

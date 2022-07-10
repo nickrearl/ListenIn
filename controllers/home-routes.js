@@ -125,7 +125,7 @@ router.get('/u/:id', (req, res) => {
             'anthem',
             [sequelize.literal('(SELECT COUNT(*) FROM favorite WHERE user.id = favorite.user_id)'), 'favorite_count'],
             [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE user.id = vote.user_id)'), 'vote_count'],
-            [sequelize.literal('(SELECT COUNT(*) FROM follow WHERE user.id = follow.followed_user_id)'), 'follower_count']
+            [sequelize.literal('(SELECT COUNT(*) FROM follow WHERE user.id = follow.following_id)'), 'follower_count']
         ],
         include: [
             {
@@ -194,7 +194,6 @@ router.get('/u/:id', (req, res) => {
         }
         
         const user = dbUserData.get({ plain: true });
-        var current_user = req.user;
         res.render('profile-page', {
             user,
             loggedIn: req.session.loggedIn
