@@ -145,7 +145,7 @@ Comment.belongsTo(Post, {
 
 // ------- Follow associations ------- //
 
-// These associations may need tweaks --->
+// I don't know why these needs to be here
 
     Follow.hasMany(User, {
         foreignKey: 'followed_user_id'
