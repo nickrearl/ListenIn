@@ -55,13 +55,14 @@ a.title {
     cursor: pointer;
 }
 
-.username a{
+.redirect a{
     color: black;
     text-decoration: none;
     transition: 0.5s;
+    border-radius: 10px;
 }
 
-.username a:hover {
+.redirect a:hover {
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 7%, rgba(167,45,253,1) 89%);
     color: white;

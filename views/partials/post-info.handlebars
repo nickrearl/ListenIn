@@ -2,7 +2,7 @@
                 <div class="title">
                     {{#if user.username }}
                     <div>
-                        <h3 class="username">
+                        <h3 class="redirect">
                             <a href="/u/{{user_id}}" class="p-2">{{user.username}}</a>
                         </h3>
                     </div>
@@ -10,10 +10,10 @@
                     <div>
                         {{{iframe}}}
                     </div>
-                    <div>
+                    <div class="redirect">
                         <p>{{vote_count}} Points
                             <img src="/images/UpPlay.svg" width="25" height="25" align="top"  id="{{post_id}}"></img>
-                        <a href="/post/{{id}}">{{comments.length}} comments</a>
+                            <a href="/post/{{id}}">{{comments.length}} comments</a>
                         </p>
                     </div>
                 </div>
