@@ -1,5 +1,6 @@
             <article class="col-12 col-md-6 col-lg-4 col-xl-3 text-center p-4">
                 <div class="title">
+                    {{#if user.username}}
                     <div>
                         <h3 class="username">
                             <a href="/u/{{user_id}}" class="p-2">{{user.username}}</a>
@@ -9,6 +10,7 @@
                                 Follow
                             </button>
                     </div>
+                    {{/if}}
                     <div>
                         {{{iframe}}}
                     </div>
