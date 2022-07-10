@@ -2,12 +2,7 @@ async function followHandler(event) {
     event.preventDefault();
 
     const id = this.id;
-    console.log(id);
-    if(id = session.user_id) {
-        return;
-    }
     
-
     // TODO: Verify route is correct in fetch method
     const res = await fetch('/api/u/follow', {
         method: 'post',
