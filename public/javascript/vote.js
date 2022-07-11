@@ -1,13 +1,12 @@
-async function voteHandler(e) {
-    e.preventDefault();
-
-    const id = window.location.toString().split('/')[
-        window.location.toString().split('/').length - 1
-    ];
+// Event Listeners
+$(document).on('click', '.upvote-btn', async function(event) {
+    event.preventDefault();
+    console.log('button clicked');
+    const id = this.id;
     
     // TODO: Verify route is correct in fetch method
-    const res = await fetch('/api/post/vote', {
-        method: 'PUT',
+    const res = await fetch('/api/post/upvote', {
+        method: 'put',
         body: JSON.stringify({
             post_id: id,
         }),
@@ -21,7 +20,4 @@ async function voteHandler(e) {
     } else {
         alert(res.statusText);
     }
-}
-
-// Event Listeners
-document.querySelector('.upvote-btn').addEventListener('submit', voteHandler);
+});
