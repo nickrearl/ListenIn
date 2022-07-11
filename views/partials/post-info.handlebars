@@ -10,10 +10,13 @@
                     <div>
                         {{{iframe}}}
                     </div>
+                    <p class="post-title">
+                    <a href="/post/{{id}}">{{title}}</a>
+                    </p>
                     <div>
                         <p>{{vote_count}} Points
-                            <img src="/images/UpPlay.svg" width="25" height="25" align="top"  id="{{post_id}}"></img>
-                        <a href="/post/{{id}}">{{comments.length}} comments</a>
+                            <img class="upvote-btn" src="/images/UpPlay.svg" width="25" height="25" align="top"  id="{{post_id}}"></img>
+                        <a>{{comments.length}} comments</a>
                         </p>
                     </div>
                 </div>
