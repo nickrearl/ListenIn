@@ -4,9 +4,11 @@ const sequelize = require('../config/connection');
 // Create our post model
 class Post extends Model {
     static upvote(body, models) {
-        return models.Vote.create({
+        return models.Vote.findOrCreate({
+            where: {
             user_id: body.user_id,
             post_id: body.post_id
+            }
         }).then(() => {
             return Post.findOne({
                 where: {
