@@ -11,13 +11,13 @@
 
         <div class="buttons">
             <button type="submit" class="post-btn">Add Comment</button>
-            <button type="button" class="upvote-btn">upvote</button>
+            <button type="button" class="upvote-btn">Upvote</button>
         </div>
     </form>
     {{/if}}
 </div>
 <script src="/javascript/logout.js"></script>
-{{!-- {{#if loggedIn}}
-<script src="./public/javascript/comment.js"></script>
-<script src="./public/javascript/vote.js"></script>
-{{/if}} --}}
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/vote.js"></script>
+{{/if}}
