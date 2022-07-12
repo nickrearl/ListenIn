@@ -1,12 +1,10 @@
             <article class="col-12 col-md-6 col-lg-4 col-xl-3 text-center p-4">
                 <div class="title">
-                    {{#if user.username }}
                     <div>
                         <h3 class="redirect">
                             <a href="/u/{{user_id}}" class="p-2">{{user.username}}</a>
                         </h3>
                     </div>
-                    {{/if}}
                     <div>
                         {{{iframe}}}
                     </div>
@@ -15,8 +13,8 @@
                     </p>
                     <div>
                         <p>{{vote_count}} Points
-                            <object class="upvote-btn" data="/images/UpPlay.svg" width="25" height="25" align="top"  id="{{id}}"></object>
-                        <a>{{comments.length}} comments</a>
+                            <img class="upvote-btn" src="/images/upvote.png" width="25" height="25" align="top"  id="{{id}}"></img>
+                        <a>{{comments.length}} Comments</a>
                         </p>
                     </div>
                 </div>

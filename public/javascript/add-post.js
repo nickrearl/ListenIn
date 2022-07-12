@@ -9,17 +9,17 @@ async function parsing(post_url) {
     console.log(data);
     let thumbnail = data.thumbnail_url;
     let iframe = '<iframe src="https://open.spotify.com/embed/track/' + blob + '?utm_source=oembed" width="275" height="350" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
-// <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3aIhJDHxr1kgTSnutJxPTH?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
     return { title, thumbnail, iframe};
 }
 
 async function newFormHandler(event) {
     event.preventDefault();
 
-    const post_url = document.querySelector('input[name="spotify"]').value;
+    const url = document.querySelector('input[name="spotify"]').value.trim();
+    
+    const post_url = url.slice(0, 53);
 
     let data = await parsing(post_url);
-    console.log(data)
     let title = data.title;
     let thumbnail = data.thumbnail;
     let iframe = data.iframe;
@@ -40,7 +40,7 @@ async function newFormHandler(event) {
     if (response.ok) {
     document.location.replace('/');
     } else {
-    alert(response.statusText);
+    alert("-- Please enter a Spotify link --");
     }
 }
   
