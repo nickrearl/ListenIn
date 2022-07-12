@@ -1,8 +1,6 @@
 
 # ListenIn
 
-!!!!!!IN DEVELOPMENT!!!!!!
-
 ## Contents
 
 - [User Story](#user_story)
@@ -46,9 +44,9 @@ Start the node application by running:
 
 ## Preview
 
-![Preview](INSERT IMAGE LINK HERE)
+![Preview](./public/images/preview.png)
 
-Check out the deployed application [here](INSERT LINK TO DEPLOYED PAGE HERE).
+Check out the deployed application [here](https://listeninlistenin.herokuapp.com/).
 
 ## Contributing
 
