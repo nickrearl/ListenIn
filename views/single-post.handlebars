@@ -1,0 +1,24 @@
+<div class="row justify-content-center">
+    {{> post-info post}}
+
+    {{>comments post.comments}}
+
+    {{#if loggedIn}}
+    <form class="comments col-6 text-center m-4 p-2 comment-form">
+        <div>
+            <textarea name="comment-body"></textarea>
+        </div>
+
+        <div class="buttons">
+            <button type="submit" class="post-btn">Add Comment</button>
+            {{!-- Button (Symbol) already under posts by point count --}}
+            {{!-- <button type="button" class="upvote-btn">Upvote</button> --}}
+        </div>
+    </form>
+    {{/if}}
+</div>
+{{#if loggedIn}}
+<script src="/javascript/logout.js"></script>
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/vote.js"></script>
+{{/if}}

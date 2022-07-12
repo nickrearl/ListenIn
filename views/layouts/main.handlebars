@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ListenIn</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <link rel="icon" type="image/x-icon" href="/images/play.svg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="container-fluid" >
+        <section class="row justify-content-around align-items-center text-center">
+            <h1 class="col-12 col-md-3 p-2"><object data="/images/play.svg" width="55" height="55" align="top"></object><a class="title" href="/">ListenIn</a></h1>
+            {{#if loggedIn }}
+            <form id="new-post-form" class="col-12 col-md-5 p-2">
+                <input type="text" placeholder="Spotify Link" name="spotify" id="spotify-link" class="link-input">
+                <button type="submit" id="post-submit-btn" class="post-btn">Submit</button>                
+            </form>
+            <button type="button" id="logout" class="log-btn col-12 col-md-1 p-2">Log Out</button>
+            {{else}}
+            <button type="button" id="login" class="log-btn col-12 col-md-1 p-2"><a href="/login">Login</a></button>
+            {{/if}}
+        </section>
+    </header>
+    <main class="container-fluid">
+        {{{body}}}
+    </main>
+        {{#if loggedIn }}
+        <script src="/javascript/logout.js"></script>
+        <script src="/javascript/add-post.js"></script>
+        <script src="/javascript/vote.js"></script>
+        {{/if}}
+
+</body>

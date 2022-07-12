@@ -1,16 +1,18 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Vote extends Model {}
+class Follow extends Model {}
 
-Vote.init(
+Follow.init(
     {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        user_id: {
+        // These two may need to be tweaked.
+        // Not sure if functional
+        follower_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
@@ -18,31 +20,26 @@ Vote.init(
                 key: 'id'
             }
         },
-        post_id: {
+        following_id: {
             type: DataTypes.INTEGER,
-            // changed to true to allow comment vs. post votes
-            allowNull: true,
+            allowNull: false,
             references: {
-                model: 'post',
-                key: 'id'
-            }
-        },
-        comment_id: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-            references: {
-                model: 'post',
+                model: 'user',
                 key: 'id'
             }
         }
+        // void: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     unique: true,
+        // }
     },
     {
         sequelize,
-        timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'vote'
+        modelName: 'follow'
     }
 );
 
-module.exports = Vote;
+module.exports = Follow;

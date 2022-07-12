@@ -1,0 +1,106 @@
+header {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 7%, rgba(167,45,253,1) 89%);
+    color: white;
+}
+
+a.title {
+        color: inherit;
+        text-decoration: inherit;
+        font-weight: inherit;
+}
+
+.link-input {
+    width: 50%;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.post-btn, .upvote-btn {
+    border: white;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.log-btn {
+    border: white;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: inherit;
+    color: white;
+}
+
+.log-btn a {
+    color: inherit;
+    text-decoration: inherit;
+    font-weight: inherit;
+}
+
+.user-form input {
+    width: 100%;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.user-form button {
+    width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 7%, rgba(167,45,253,1) 89%);
+    color: white;
+    border: rgb(0,0,0);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.redirect a{
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.redirect a:hover {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 7%, rgba(167,45,253,1) 89%);
+    color: white;
+    opacity: 1;
+}
+
+.post-title a{
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.post-title a:hover {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 7%, rgba(167,45,253,1) 89%);
+    color: white;
+    opacity: 1;
+}
+
+/* Comment box styling */
+
+.comment-form {
+    border-radius: 4px;
+    border: 1px solid #dad7d7;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+textarea {
+    border-radius: 4px;
+    border: 1px solid #dad7d7;
+    padding: 10px;
+    font-size: 15px;
+    height: 100px;
+    width: 100%;
+}
