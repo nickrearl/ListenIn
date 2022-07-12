@@ -3,7 +3,7 @@ const {Comment, Post, User, Vote } = require('../models')
 const sequelize = require('../config/connection')
 
 router.get('/', async (req, res) => {
-    try {
+    try { 
         const dbPostData = await Post.findAll({
             attributes: [
                 'id',
