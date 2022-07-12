@@ -20,6 +20,10 @@ const sess = {
 };
 
 app.use(session(sess));
+app.use(function (req, res, next) {
+    res.locals.session = req.session;
+    next();
+});
 
 const helpers = require('./utils/helpers');
 
