@@ -12,7 +12,7 @@ async function commentHandler(event) {
             body: JSON.stringify({
                 comment_text,
                 post_id,
-                // comment_id // Might need ?? - currently throws error
+                // comment_id // comment back in for comment threads
             }),
             headers: {
                 'Content-Type': 'application/json'
