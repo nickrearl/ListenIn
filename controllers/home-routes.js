@@ -58,6 +58,12 @@ router.get('/login', (req, res) => {
     res.render('login');
 })
 
+router.get('/how-to', (req, res) => {
+    res.render('how-to', {
+        loggedIn: req.session.loggedIn
+    });
+})
+
 router.get('/logout', (req, res) => {
     
 })

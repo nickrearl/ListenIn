@@ -37,6 +37,20 @@ a.title {
     font-weight: inherit;
 }
 
+.how-to-btn {
+    border: white;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: inherit;
+    color: white;
+}
+
+.how-to-btn a {
+    color: inherit;
+    text-decoration: inherit;
+    font-weight: inherit;
+}
+
 .user-form input {
     width: 100%;
     border: 1px solid #ccc; 
@@ -92,6 +106,12 @@ a.title {
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 7%, rgba(167,45,253,1) 89%);
     color: white;
+}
+
+span {
+    color: purple;
+    font-weight: 200;
+    font-style: italic;
 }
 
 /* Comment box styling */
