@@ -26,7 +26,7 @@ Run the following command in your terminal in order to install all the packages:
 
 `npm install`
 
-## Usage - TODO: FINALIZE ONCE PROJECT IS COMPLETED
+## Usage
 
 Run the following commands in get mysql up and running: 
 
